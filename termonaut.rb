@@ -2,24 +2,25 @@ class Termonaut < Formula
   desc "Gamified terminal productivity tracker with XP, achievements, and GitHub integration"
   homepage "https://github.com/oiahoon/termonaut"
   version "0.9.5"
+  license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
+    on_intel do
       url "https://github.com/oiahoon/termonaut/releases/download/v0.9.5/termonaut-0.9.5-darwin-amd64"
       sha256 ""
-
-      def install
-        bin.install "termonaut-0.9.5-darwin-amd64" => "termonaut"
-      end
     end
 
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/oiahoon/termonaut/releases/download/v0.9.5/termonaut-0.9.5-darwin-arm64"
       sha256 ""
+    end
+  end
 
-      def install
-        bin.install "termonaut-0.9.5-darwin-arm64" => "termonaut"
-      end
+  def install
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "termonaut-0.9.5-darwin-amd64" => "termonaut"
+    elsif OS.mac? && Hardware::CPU.arm?
+      bin.install "termonaut-0.9.5-darwin-arm64" => "termonaut"
     end
   end
 
