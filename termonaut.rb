@@ -6,13 +6,13 @@ class Termonaut < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/oiahoon/termonaut/releases/download/0.10.1/termonaut-0.10.1-darwin-amd64"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      url "https://github.com/oiahoon/termonaut/releases/download/v0.10.1/termonaut-0.10.1-darwin-amd64"
+      sha256 "a152db963d0807ff8d58cb965f5c985df46c86b1d95aef0af9f5a4f42e4e0136"
     end
 
     on_arm do
-      url "https://github.com/oiahoon/termonaut/releases/download/0.10.1/termonaut-0.10.1-darwin-arm64"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      url "https://github.com/oiahoon/termonaut/releases/download/v0.10.1/termonaut-0.10.1-darwin-arm64"
+      sha256 "c8d8fcdbc5fd5b8c9f2828a9d4619250b9467003a611cc07e77d8accda6564db"
     end
   end
 
