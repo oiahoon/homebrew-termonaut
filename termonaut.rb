@@ -7,12 +7,12 @@ class Termonaut < Formula
   on_macos do
     on_intel do
       url "https://github.com/oiahoon/termonaut/releases/download/0.10.1/termonaut-0.10.1-darwin-amd64"
-      sha256 ""
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
 
     on_arm do
       url "https://github.com/oiahoon/termonaut/releases/download/0.10.1/termonaut-0.10.1-darwin-arm64"
-      sha256 ""
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
 
@@ -51,6 +51,6 @@ class Termonaut < Formula
   end
 
   test do
-    assert_match "0.10.1", shell_output("#{bin}/termonaut version")
+    assert_match "0.10.1", shell_output("\#{bin}/termonaut version")
   end
 end
