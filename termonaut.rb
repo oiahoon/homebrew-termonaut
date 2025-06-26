@@ -1,26 +1,26 @@
 class Termonaut < Formula
   desc "Gamified terminal productivity tracker with XP, achievements, and GitHub integration"
   homepage "https://github.com/oiahoon/termonaut"
-  version "0.10.1"
+  version "0.10.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/oiahoon/termonaut/releases/download/v0.10.1/termonaut-0.10.1-darwin-amd64"
-      sha256 "7878e895425f91640691a89d02ae596fd1f78db2afa61fe59f9d2916d7c9dc46"
+      url "https://github.com/oiahoon/termonaut/releases/download/v0.10.2/termonaut-0.10.2-darwin-amd64"
+      sha256 "1b9c7411ea5711d9d844bf50ad804f07fdf853b844d383dbd0983aaa7c881c2e"
     end
 
     on_arm do
-      url "https://github.com/oiahoon/termonaut/releases/download/v0.10.1/termonaut-0.10.1-darwin-arm64"
-      sha256 "1c1cd75535342a860abda28dd8b968e950440c6ab3c4d0c74a0f0e70796257e6"
+      url "https://github.com/oiahoon/termonaut/releases/download/v0.10.2/termonaut-0.10.2-darwin-arm64"
+      sha256 "e5b2660648df914b5409b428daf2f081584a5925aa9944548bd6634dd93c2148"
     end
   end
 
   def install
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "termonaut-0.10.1-darwin-amd64" => "termonaut"
+      bin.install "termonaut-0.10.2-darwin-amd64" => "termonaut"
     elsif OS.mac? && Hardware::CPU.arm?
-      bin.install "termonaut-0.10.1-darwin-arm64" => "termonaut"
+      bin.install "termonaut-0.10.2-darwin-arm64" => "termonaut"
     end
   end
 
@@ -51,6 +51,6 @@ class Termonaut < Formula
   end
 
   test do
-    assert_match "0.10.1", shell_output("\#{bin}/termonaut version")
+    assert_match "0.10.2", shell_output("\#{bin}/termonaut version")
   end
 end
